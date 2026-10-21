@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "name": "Tupo Replay",
+  "version": "0.1.0",
+  "description": "Records every move of your playtupo.com games and exports them as an animated GIF.",
+  "author": "JonesJugHead",
+  "homepage_url": "https://github.com/JonesJugHead/tupo-replay",
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "tupo-replay@jonesjughead",
+      "strict_min_version": "128.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
+    }
+  },
+  "icons": {
+    "48": "icons/icon.svg",
+    "96": "icons/icon.svg"
+  },
+  "permissions": ["storage", "unlimitedStorage", "https://playtupo.com/*"],
+  "background": {
+    "scripts": ["background.js"],
+    "persistent": false
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://playtupo.com/*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "browser_action": {
+    "default_title": "Tupo Replay",
+    "default_icon": "icons/icon.svg"
+  }
+}

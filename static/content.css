@@ -1,0 +1,202 @@
+html.tupo-replay {
+  background: oklch(98.4% 0.003 247.858);
+}
+
+html.tupo-replay.dark {
+  background: oklch(12.9% 0.042 264.695);
+}
+
+html.tupo-replay:not(.tr-styled) body {
+  visibility: hidden;
+}
+
+html.tupo-replay body {
+  margin: 0;
+  min-height: 100dvh;
+}
+
+html.tupo-replay .site-header > div {
+  position: relative;
+}
+
+html.tupo-replay .tr-header-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+html.tupo-replay .tr-drawer-title {
+  line-height: 1;
+}
+
+html.tupo-replay .tr-page {
+  display: grid;
+  grid-template-columns: minmax(15rem, 20rem) minmax(0, 1fr);
+  gap: 2rem;
+  width: 100%;
+  max-width: 68rem;
+  margin: 0 auto;
+  padding: 1.5rem 1rem 3rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 760px) {
+  html.tupo-replay .tr-page {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 1.5rem;
+  }
+}
+
+html.tupo-replay .tr-label {
+  display: block;
+  margin: 0 0 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  opacity: 0.7;
+}
+
+html.tupo-replay .tr-small {
+  margin: 0;
+  font-size: 0.875rem;
+  opacity: 0.8;
+}
+
+html.tupo-replay .tr-games {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+html.tupo-replay .tr-game {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.15rem;
+  width: 100%;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+
+html.tupo-replay .tr-game strong {
+  font-size: 1.1rem;
+  font-weight: 900;
+}
+
+html.tupo-replay .tr-game[aria-current='true'] {
+  outline: 3px solid var(--color-ink);
+  outline-offset: 2px;
+}
+
+html.tupo-replay .tr-badge {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0 0.5rem;
+  border-radius: 999px;
+  background: var(--color-brand, #b8e6fe);
+  color: #273a6d;
+  font-family: var(--font-sans, system-ui, sans-serif);
+  font-size: 0.7rem;
+  font-weight: 800;
+  vertical-align: 0.15rem;
+}
+
+html.tupo-replay .tr-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.75rem;
+  padding: 1.25rem;
+}
+
+html.tupo-replay .tr-empty p {
+  margin: 0;
+}
+
+html.tupo-replay .tr-viewer {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  min-width: 0;
+}
+
+html.tupo-replay .tr-stage {
+  width: 100%;
+  max-width: 30rem;
+}
+
+html.tupo-replay .tr-canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1.25rem;
+  border: var(--border-fluid, 3px) solid var(--color-edge);
+}
+
+html.tupo-replay .tr-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+html.tupo-replay .tr-transport {
+  max-width: 30rem;
+}
+
+html.tupo-replay .tr-scrub {
+  flex: 1;
+  min-width: 8rem;
+  accent-color: var(--color-ink);
+}
+
+html.tupo-replay .tr-range {
+  width: 12rem;
+  max-width: 100%;
+  accent-color: var(--color-ink);
+}
+
+html.tupo-replay .tr-position {
+  min-width: 3.5rem;
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+html.tupo-replay .tr-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 1.75rem;
+  align-items: flex-start;
+}
+
+html.tupo-replay .tr-control {
+  display: flex;
+  flex-direction: column;
+}
+
+html.tupo-replay .tr-choice[aria-pressed='true'] {
+  outline: 3px solid var(--color-ink);
+  outline-offset: 2px;
+}
+
+html.tupo-replay .tr-choice[aria-pressed='false'] {
+  opacity: 0.75;
+}
+
+html.tupo-replay .tr-danger {
+  --color-button-face: var(--color-danger, #ff637e);
+}
+
+html.tupo-replay [hidden] {
+  display: none !important;
+}
